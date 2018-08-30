@@ -1,0 +1,91 @@
+<form #rsvpForm="ngForm" (ngSubmit)="processRSVP()">
+  <br>
+  <table>
+    <tr>
+      <td>
+        <span><b>Name</b></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field>
+          <input required matInput maxlength="30" placeholder="First Name" name="firstname" ngModel>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input required matInput maxlength="30" placeholder="Last Name" name="lastname" ngModel>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span><b>Spouse or Guest Name</b></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field>
+          <input matInput maxlength="30" placeholder="First Name" name="guest-firstname" ngModel>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput maxlength="30" placeholder="Last Name" name="guest-lastname" ngModel>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span><b>Would you like to pre-order a reunion DVD ($19.95)?</b></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-radio-group name="orderCD" ngModel>
+            <mat-radio-button value="true">Yes</mat-radio-button>
+            <mat-radio-button value="false">No</mat-radio-button>
+          </mat-radio-group>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!rsvpForm.valid">RSVP</button>
+  </div>
+  <!-- <table>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input type="text" name="name" ngModel>
+      </td>
+    </tr>
+    <tr>
+        <td>Phone:</td>
+        <td>
+          <input type="tel" name="mobile" ngModel>
+        </td>
+    </tr>
+    <tr>
+      <td>Attending?</td>
+      <td>
+        <input type="radio" name="attending" value="true" ngModel>Yes
+        <input type="radio" name="attending" value="false" ngModel>No
+      </td>
+    </tr>
+    <tr>
+      <td>Comments:</td>
+      <td>
+        <textarea cols="20" name="comments" rows="5" ngModel>
+        </textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button mat-raised-button color="primary" type="submit">RSVP</button>
+      </td>
+    </tr>
+  </table> -->
+
+</form>
